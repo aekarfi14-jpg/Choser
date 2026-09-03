@@ -34,6 +34,20 @@ jobs:
       - name: Sync Capacitor
         run: npx cap sync android
 
+      - name: Set Choser launcher icon
+        run: |
+          mkdir -p android/app/src/main/res/mipmap-hdpi
+          mkdir -p android/app/src/main/res/mipmap-mdpi
+          mkdir -p android/app/src/main/res/mipmap-xhdpi
+          mkdir -p android/app/src/main/res/mipmap-xxhdpi
+          mkdir -p android/app/src/main/res/mipmap-xxxhdpi
+          convert public/assets/Sraha-launcher.jpg -resize 512x512^ -gravity center -extent 512x512 /tmp/choser-icon.png
+          cp /tmp/choser-icon.png android/app/src/main/res/mipmap-hdpi/ic_launcher.png
+          cp /tmp/choser-icon.png android/app/src/main/res/mipmap-mdpi/ic_launcher.png
+          cp /tmp/choser-icon.png android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+          cp /tmp/choser-icon.png android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+          cp /tmp/choser-icon.png android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
