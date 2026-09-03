@@ -1,0 +1,6 @@
+{
+  "name": "Shooser",
+  "description": "Algerian party game with Truth and Dare modes, multi-touch finger selection, sound effects, and camera video capture.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
