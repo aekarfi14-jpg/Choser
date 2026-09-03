@@ -44,13 +44,13 @@ class AudioManager {
   // quack_5: Button click sound
   public playQuack() {
     if (!this.sfxEnabled) return;
-    this.playSoundWithFallback('/assets/quack_5', () => this.synthQuack());
+    this.playSoundWithFallback('/assets/quack_5.mp3', () => this.synthQuack());
   }
 
   // yyy_ahqVbsA: Delete player sound (funny descending wobble slide)
   public playDeletePlayer() {
     if (!this.sfxEnabled) return;
-    this.playSoundWithFallback('/assets/yyy_ahqVbsA', () => this.synthDeleteSlide());
+    this.playSoundWithFallback('/assets/yyy_ahqVbsA.mp3', () => this.synthDeleteSlide());
   }
 
   // faaah.mp3: Selection start sound ("FAAAAH!")
